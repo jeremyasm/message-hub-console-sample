@@ -73,6 +73,7 @@ public class MessageHubConsoleSample {
     }
     
     public static void main(String args[])  {
+    	
         try {
             final String topic = "message-hub-console-sample-topic";
             final String userDir = System.getProperty("user.dir");
@@ -116,7 +117,7 @@ public class MessageHubConsoleSample {
                 bootstrapServers = args[0];
                 adminRestURL = args[1];
                 apiKey = args[2];
-
+               
                 updateJaasConfiguration(apiKey.substring(0, 16), apiKey.substring(16));
 
                 // In local mode the app can run only the producer or only the consumer
